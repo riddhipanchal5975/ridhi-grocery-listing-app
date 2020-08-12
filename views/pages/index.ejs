@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="/styles/base.css" />
+    <meta charset="UTF-8">
+		<title>Grocery Listing</title>
+	</head>
+	<body class="container">
+		<header>
+    	<%- include('../partials/header'); %>
+		</header>
+		<main>
+	    <div class="main">
+	    	<link rel="stylesheet" type="text/css" href="/styles/body.css" />
+	    	<ul class="item-list">
+	    		<% items.forEach(function(item) { %>
+        		<li class="item">
+        			<div class="item-quantity">QTY: <%= item.qty %></div>
+        			<div class="item-name"><%= item.item %></div>
+        			<div class="item-type"><%= item.type %></div>
+        			<div class="item-category"><%= item.category %></div>
+    			<% }); %>
+	    	</ul>
+	    </div>
+		</main>
+	</body>
+</html>
